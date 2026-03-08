@@ -1,0 +1,84 @@
+#header{
+    z-index: 1;
+}
+#header .navbar .navbar-collapse{
+    flex-grow: 0;
+}
+#header .navbar-light .navbar-nav .nav-link.active{
+    color: green;
+}
+#header .navbar-light .navbar-nav .nav-link{
+    color:  rgb(255, 255, 255);
+}
+#header .navbar-light .nav-link{
+    position: relative;
+}
+#header .navbar-light .nav-link::after{
+    content: "";
+    background-color: green;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+#header .navbar-nav{
+    gap: 10px;
+}
+#header .navbar-light .nav-link:hover::after{
+    width: 100%;
+}
+#header .nav-link .nav-link.active:after{
+    width: 100%;
+}
+#carousel{
+    max-height: 915px;
+}
+#carousel .img-carousel{
+    height: 915px;
+    object-fit: cover;
+}
+#carousel .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+#carousel .carousel-indicators button:active{
+    background-color: green;
+    opacity: 1;
+}
+#carousel .carousel-inner .img-profile{
+    width: 100px;
+    height: 100px;
+}
+#carousel .carousel-caption img{
+    animation: fade-up 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+    /* giu nguyen toan bo css sau khi hoan thanh xong animation */
+}
+#carousel .carousel-caption h5{
+    animation: fade-up 1.5s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+    /* giu nguyen toan bo css sau khi hoan thanh xong animation */
+}
+#carousel .carousel-caption p{
+    animation: fade-up 1s;
+    animation-delay: 1.5s;
+    opacity: 0;
+    animation-fill-mode: both;
+    /* giu nguyen toan bo css sau khi hoan thanh xong animation */
+}
+@keyframes fade-up{
+    0%{
+        transform: translateY(200px);
+        opacity:0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
